@@ -1,0 +1,61 @@
+/* Add this CSS to your stylesheets or components */
+.CustomTabButton{
+    justify-content: space-evenly;
+}
+/* Styling for sections */
+.elementor-section {
+    margin-bottom: 30px;
+  }
+  
+  /* Styling for columns */
+  .elementor-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  /* Styling for image widgets */
+  .elementor-element-7e8d368 img,
+  .elementor-element-021f983 img,
+  .elementor-element-81fa227 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    
+  }
+  
+  /* Styling for heading widgets */
+  .elementor-element-70f09f9 h2,
+  .elementor-element-8241bfe h2,
+  .elementor-element-44545f0 h2 {
+    font-family: "DM Sans", Bangla1094, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Styling for text widgets */
+  .elementor-element-98bed36 p,
+  .elementor-element-243f7da p,
+  .elementor-element-990c1dd p {
+    font-family: "DM Sans", Bangla1094, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  /* Additional styling */
+  .elementor-container{
+    display: flex;
+   
+    align-items: center;
+  }
+  
+  /* Responsive styling */
+  @media screen and (max-width: 768px) {
+    .elementor-container {
+      flex-direction: column;
+    }
+  }
+  
