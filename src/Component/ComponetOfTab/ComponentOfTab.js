@@ -5,6 +5,10 @@ import imageOfTap from '../../Images/tap-nfc-qapkbln0c38roe17gcfot892k0biwpsqnvi
 import imageOfScan from '../../Images/scan-qapkbzql6ls2ijgq60j3cmozgse146cpptah2tkvnm.jpg'
 import imageOfShare from '../../Images/share-qapkc4fs4ryi4l9wekk873iafpqv6nvdegjwh7dwsi.jpg'
 import NfcPhone from '../../Images/Inkedd439bdccb0da4fe364a04510dacf98c0.jpg'
+import time from '../../Images/time.jpg'
+import update from '../../Images/update.jpg'
+import connect from '../../Images/connect.jpg'
+import email from '../../Images/email.jpg'
 
 
 
@@ -102,25 +106,32 @@ const ComponentOfTab = () => {
     <Tabs.Content value="Unlimited_Use" className=' text-left flex justify-content: space-between; '>
     <div  className="elementor-widget-wrap elementor-element-populated">
      <Section
-      imageUrl={imageOfTap}
+      imageUrl={time}
       title="tap nfc"
       alt="tap nfc"
-      heading="Tap"
-      text="Share contact information instantly with a tap on NFC-compatible smartphones."
+      heading="No Time Barrier"
+      text="SUse your INTRO Digital Smart Business card as long as you want."
     />
      <Section
-      imageUrl={imageOfScan}
-      title="Scan nfc"
-      alt="Scan nfc"
-      heading="Scan"
-      text="For older phones scan the QR Code."
+      imageUrl={update}
+      title="Update nfc"
+      alt="Update nfc"
+      heading="Update"
+      text="Update, edit, and hide your information anytime. No Additional Cost is required."
     />
      <Section
-      imageUrl={imageOfShare}
+      imageUrl={connect}
       title="Share nfc"
       alt="Share nfc"
-      heading="Share"
-      text="Send your profile link to anyone via text message or using any other platform to share your contact profile."
+      heading="Connect"
+      text="Connect wherever you go. Your INTRO smart business card can be easily shared with anyone you meet."
+    />
+     <Section
+      imageUrl={email}
+      title="Share nfc"
+      alt="Share nfc"
+      heading="Email signature"
+      text="Use your INTRO link to your email signature, and your customer will get all of your contact, social platforms in one place."
     />
      </div>
      <div>
@@ -129,7 +140,7 @@ const ComponentOfTab = () => {
 
     </Tabs.Content>
 
-    <Tabs.Content className='text-left flex justify-content: space-between; ' value="Capture_Leads">
+    <Tabs.Content value="Capture_Leads" className='text-left flex justify-content: space-between; ' >
      <div  className="elementor-widget-wrap elementor-element-populated">
      <Section
       imageUrl={imageOfTap}
