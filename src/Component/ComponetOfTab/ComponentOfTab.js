@@ -36,19 +36,21 @@ const [activeTab,setActiveTab] = useState("Gents")
     <div className='marketPlaceContainer grid lg:grid-cols-4 lg:gap-x-10 lg:gap-y-7 sm:grid-cols-3 sm:gap-x-5 sm:gap-y-3 md:grid-cols-4 md:gap-x-5 gap-y-3 m-5    '>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={photo1}  /></figure>
-  <div className="">
+  <div className="text-center">
+   
     <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1090</h3>
+   
     <div className="parentButton flex mt-5 ">
       <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
       <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
     </div>
   </div>
 </div>
-            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+     <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={photo3}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1090</h3>
@@ -60,7 +62,7 @@ const [activeTab,setActiveTab] = useState("Gents")
 </div>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={photo2}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1090</h3>
@@ -72,7 +74,7 @@ const [activeTab,setActiveTab] = useState("Gents")
 </div>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={photo3}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1090</h3>
@@ -96,7 +98,7 @@ const [activeTab,setActiveTab] = useState("Gents")
     <div className='marketPlaceContainer grid lg:grid-cols-4 lg:gap-x-10 lg:gap-y-7 sm:grid-cols-3 sm:gap-x-5 sm:gap-y-3 md:grid-cols-4 md:gap-x-5 gap-y-3 m-5    '>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={women1}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Womens Premium Pink Top </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>2090</h3>
@@ -108,7 +110,7 @@ const [activeTab,setActiveTab] = useState("Gents")
 </div>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={women2}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Womens Premium blue Top </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1590</h3>
@@ -120,7 +122,7 @@ const [activeTab,setActiveTab] = useState("Gents")
 </div>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={women3}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Womens Premium  Top </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1990</h3>
@@ -132,7 +134,7 @@ const [activeTab,setActiveTab] = useState("Gents")
 </div>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={women4}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Womens Premium Yellow Top </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1890</h3>
@@ -162,7 +164,7 @@ const [activeTab,setActiveTab] = useState("Gents")
     <div className='marketPlaceContainer grid lg:grid-cols-4 lg:gap-x-10 lg:gap-y-7 sm:grid-cols-3 sm:gap-x-5 sm:gap-y-3 md:grid-cols-4 md:gap-x-5 gap-y-3 m-5    '>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={kid1}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Kids Premium Punjabi </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1090</h3>
@@ -174,7 +176,7 @@ const [activeTab,setActiveTab] = useState("Gents")
 </div>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={kid2}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Kids Premium Punjabi </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1090</h3>
@@ -186,7 +188,7 @@ const [activeTab,setActiveTab] = useState("Gents")
 </div>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={kid3}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Kids Premium Punjabi </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1090</h3>
@@ -198,7 +200,7 @@ const [activeTab,setActiveTab] = useState("Gents")
 </div>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={kid4}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Kids Premium Punjabi </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1090</h3>
@@ -228,7 +230,7 @@ const [activeTab,setActiveTab] = useState("Gents")
     <div className='marketPlaceContainer grid lg:grid-cols-4 lg:gap-x-10 lg:gap-y-7 sm:grid-cols-3 sm:gap-x-5 sm:gap-y-3 md:grid-cols-4 md:gap-x-5 gap-y-3 m-5    '>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={photo3}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1090</h3>
@@ -240,7 +242,7 @@ const [activeTab,setActiveTab] = useState("Gents")
 </div>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={women1}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1090</h3>
@@ -252,7 +254,7 @@ const [activeTab,setActiveTab] = useState("Gents")
 </div>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={kid1}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1090</h3>
@@ -264,7 +266,7 @@ const [activeTab,setActiveTab] = useState("Gents")
 </div>
             <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={women2}  /></figure>
-  <div className="">
+  <div className="text-center">
     <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
     <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
     <h3 className='font-bold text-xl mt-3'>1090</h3>
