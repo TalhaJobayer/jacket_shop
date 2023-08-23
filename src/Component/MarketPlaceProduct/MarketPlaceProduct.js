@@ -33,7 +33,8 @@ const MarketPlaceProduct = () => {
       <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
     </div>
   </div>
-</div>   <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+</div>   
+<div className="card card-compact md:w-50  bg-base-100 shadow-xl">
   <figure><img src={photo3} alt="Shoes" /></figure>
   <div className="">
     <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>

@@ -1,203 +1,291 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./ComponentOfTab.css"
 import { Box, Tabs, Text } from '@radix-ui/themes';
-import imageOfTap from '../../Images/tap-nfc-qapkbln0c38roe17gcfot892k0biwpsqnvi6vo5s8y.jpg'
-import imageOfScan from '../../Images/scan-qapkbzql6ls2ijgq60j3cmozgse146cpptah2tkvnm.jpg'
-import imageOfShare from '../../Images/share-qapkc4fs4ryi4l9wekk873iafpqv6nvdegjwh7dwsi.jpg'
-import NfcPhone from '../../Images/Inkedd439bdccb0da4fe364a04510dacf98c0.jpg'
-import time from '../../Images/time.jpg'
-import update from '../../Images/update.jpg'
-import connect from '../../Images/connect.jpg'
-import email from '../../Images/email.jpg'
-
-
-
-
-const ImageWidget = ({ imageUrl, title, alt }) => (
-  <div className="elementor-element elementor-element-7e8d368 elementor-widget elementor-widget-image">
-    <div className="elementor-widget-container">
-      <img
-        data-lazyloaded="1"
-        src={imageUrl}
-        decoding="async"
-        data-src={imageUrl}
-        title={title}
-        alt={alt}
-        loading="lazy"
-        data-ll-status="loaded"
-        className="entered litespeed-loaded"
-      />
-    </div>
-  </div>
-);
-
-const TextWidget = ({ heading, text }) => (
-  <div className="elementor-element elementor-element-70f09f9 elementor-widget elementor-widget-heading">
-    <div className="elementor-container">
-      <h2 className="elementor-heading-title elementor-size-default" style={{ fontFamily: '"DM Sans", Bangla1094, sans-serif' }}>
-        {heading}
-      </h2>
-    </div>
-    <div className="elementor-element elementor-element-98bed36 elementor-widget elementor-widget-text-editor" style={{ fontFamily: '"DM Sans", Bangla1094, sans-serif' }}>
-      <div className="elementor-container">
-        <p>{text}</p>
-      </div>
-    </div>
-  </div>
-);
-
-const Section = ({ imageUrl, title, alt, heading, text }) => (
-  <section className="elementor-section elementor-inner-section elementor-section-boxed elementor-section-height-default elementor-section-height-default">
-    <div className="elementor-container elementor-column-gap-default">
-      <div className="elementor-column elementor-col-50 elementor-inner-column elementor-element">
-        <ImageWidget imageUrl={imageUrl} title={title} alt={alt} />
-      </div>
-      <div className="elementor-column elementor-col-50 elementor-inner-column elementor-element">
-        <TextWidget heading={heading} text={text} />
-      </div>
-    </div>
-  </section>
-);
-
+import women1 from '../../Images/women1.jpeg'
+import women2 from '../../Images/women2.jpeg'
+import women3 from '../../Images/women3.jpeg'
+import women4 from '../../Images/women 4.jpeg'
+import kid1 from '../../Images/kid1.jpeg'
+import kid2 from '../../Images/kid2.jpeg'
+import kid3 from '../../Images/kid3.jpeg'
+import kid4 from '../../Images/kid4.jpeg'
+import photo1 from '../../Images/marketplace1.jpeg'
+import photo2 from '../../Images/marketplace2.jpeg'
+import photo3 from '../../Images/marketplace3.jpeg'
+import {BsFillCartPlusFill} from 'react-icons/bs'
 
 const ComponentOfTab = () => {
+  
+const [activeTab,setActiveTab] = useState("Gents")
     return (
       <div className=' flex justify-content: space-between;'>
         <div>
-             <Tabs.Root defaultValue="Share_Instantly" >
+             <Tabs.Root   value={activeTab}
+    onValueChange={(newValue) => setActiveTab(newValue)}  >
   <Tabs.List className='CustomTabButton'>
-    <Tabs.Trigger  value="Share_Instantly">Share Instantly</Tabs.Trigger>
-    <Tabs.Trigger value="Unlimited_Use">Unlimited Use</Tabs.Trigger>
-    <Tabs.Trigger value="Capture_Leads">Capture Leads</Tabs.Trigger>
-    <Tabs.Trigger value="Grow_Business">Grow Business</Tabs.Trigger>
+    <Tabs.Trigger  value="Gents">Gents</Tabs.Trigger>
+    <Tabs.Trigger value="Women">Women</Tabs.Trigger>
+    <Tabs.Trigger value="Kids">Kids</Tabs.Trigger>
+    <Tabs.Trigger value="Top Sell">Top Sell</Tabs.Trigger>
   </Tabs.List>
 
-  <Box >
-    <Tabs.Content value="Share_Instantly" className=' text-left flex justify-content: space-between; '>
+  <Box  >
+    <Tabs.Content value="Gents" className=' text-left flex justify-content: space-between; '>
     <div  className="elementor-widget-wrap elementor-element-populated">
-     <Section
-      imageUrl={imageOfTap}
-      title="tap nfc"
-      alt="tap nfc"
-      heading="Tap"
-      text="Share contact information instantly with a tap on NFC-compatible smartphones."
-    />
-     <Section
-      imageUrl={imageOfScan}
-      title="Scan nfc"
-      alt="Scan nfc"
-      heading="Scan"
-      text="For older phones scan the QR Code."
-    />
-     <Section
-      imageUrl={imageOfShare}
-      title="Share nfc"
-      alt="Share nfc"
-      heading="Share"
-      text="Send your profile link to anyone via text message or using any other platform to share your contact profile."
-    />
-     </div>
-     <div>
-          <img className='NfcPhoneimage' src={NfcPhone}></img>
+    
+    <div className='marketPlaceContainer grid lg:grid-cols-4 lg:gap-x-10 lg:gap-y-7 sm:grid-cols-3 sm:gap-x-5 sm:gap-y-3 md:grid-cols-4 md:gap-x-5 gap-y-3 m-5    '>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={photo1}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1090</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
     </div>
-
-    </Tabs.Content>
-
-    <Tabs.Content value="Unlimited_Use" className=' text-left flex justify-content: space-between; '>
-    <div  className="elementor-widget-wrap elementor-element-populated">
-     <Section
-      imageUrl={time}
-      title="tap nfc"
-      alt="tap nfc"
-      heading="No Time Barrier"
-      text="SUse your INTRO Digital Smart Business card as long as you want."
-    />
-     <Section
-      imageUrl={update}
-      title="Update nfc"
-      alt="Update nfc"
-      heading="Update"
-      text="Update, edit, and hide your information anytime. No Additional Cost is required."
-    />
-     <Section
-      imageUrl={connect}
-      title="Share nfc"
-      alt="Share nfc"
-      heading="Connect"
-      text="Connect wherever you go. Your INTRO smart business card can be easily shared with anyone you meet."
-    />
-     <Section
-      imageUrl={email}
-      title="Share nfc"
-      alt="Share nfc"
-      heading="Email signature"
-      text="Use your INTRO link to your email signature, and your customer will get all of your contact, social platforms in one place."
-    />
-     </div>
-     <div>
-          <img className='NfcPhoneimage' src={NfcPhone}></img>
+  </div>
+</div>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={photo3}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1090</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
     </div>
+  </div>
+</div>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={photo2}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1090</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
+    </div>
+  </div>
+</div>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={photo3}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1090</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
+    </div>
+  </div>
+</div>
+      </div>
 
-    </Tabs.Content>
-
-    <Tabs.Content value="Capture_Leads" className='text-left flex justify-content: space-between; ' >
-     <div  className="elementor-widget-wrap elementor-element-populated">
-     <Section
-      imageUrl={imageOfTap}
-      title="tap nfc"
-      alt="tap nfc"
-      heading="Tap"
-      text="Share contact information instantly with a tap on NFC-compatible smartphones."
-    />
-     <Section
-      imageUrl={imageOfScan}
-      title="Scan nfc"
-      alt="Scan nfc"
-      heading="Scan"
-      text="For older phones scan the QR Code."
-    />
-     <Section
-      imageUrl={imageOfShare}
-      title="Share nfc"
-      alt="Share nfc"
-      heading="Share"
-      text="Send your profile link to anyone via text message or using any other platform to share your contact profile."
-      
-    />
     
      </div>
-     <div>
-          <img className='NfcPhoneimage' src={NfcPhone}></img>
+     
+
+    </Tabs.Content>
+
+    <Tabs.Content value="Women" className=' text-left flex justify-content: space-between; '>
+    <div  className="elementor-widget-wrap elementor-element-populated">
+    
+    <div className='marketPlaceContainer grid lg:grid-cols-4 lg:gap-x-10 lg:gap-y-7 sm:grid-cols-3 sm:gap-x-5 sm:gap-y-3 md:grid-cols-4 md:gap-x-5 gap-y-3 m-5    '>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={women1}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Womens Premium Pink Top </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>2090</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
     </div>
+  </div>
+</div>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={women2}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Womens Premium blue Top </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1590</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
+    </div>
+  </div>
+</div>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={women3}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Womens Premium  Top </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1990</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
+    </div>
+  </div>
+</div>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={women4}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Womens Premium Yellow Top </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1890</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
+    </div>
+  </div>
+</div>
+{/* ========================================= */}
+
+{/* --------------------------- */}
+
+
+
+
+
+        </div>
+
+    
+     </div>
+    </Tabs.Content>
+
+    <Tabs.Content value="Kids" className='text-left flex justify-content: space-between; ' >
+    <div  className="elementor-widget-wrap elementor-element-populated">
+    
+    <div className='marketPlaceContainer grid lg:grid-cols-4 lg:gap-x-10 lg:gap-y-7 sm:grid-cols-3 sm:gap-x-5 sm:gap-y-3 md:grid-cols-4 md:gap-x-5 gap-y-3 m-5    '>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={kid1}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Kids Premium Punjabi </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1090</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
+    </div>
+  </div>
+</div>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={kid2}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Kids Premium Punjabi </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1090</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
+    </div>
+  </div>
+</div>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={kid3}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Kids Premium Punjabi </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1090</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
+    </div>
+  </div>
+</div>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={kid4}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Kids Premium Punjabi </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1090</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
+    </div>
+  </div>
+</div>
+{/* ========================================= */}
+
+{/* --------------------------- */}
+
+
+
+
+
+        </div>
+
+    
+     </div>
      
     </Tabs.Content>
-    <Tabs.Content value="Grow_Business" className=' text-left flex justify-content: space-between; '>
+    <Tabs.Content value="Top Sell" className=' text-left flex justify-content: space-between; '>
     <div  className="elementor-widget-wrap elementor-element-populated">
-     <Section
-      imageUrl={imageOfTap}
-      title="tap nfc"
-      alt="tap nfc"
-      heading="Tap"
-      text="Share contact information instantly with a tap on NFC-compatible smartphones."
-    />
-     <Section
-      imageUrl={imageOfScan}
-      title="Scan nfc"
-      alt="Scan nfc"
-      heading="Scan"
-      text="For older phones scan the QR Code."
-    />
-     <Section
-      imageUrl={imageOfShare}
-      title="Share nfc"
-      alt="Share nfc"
-      heading="Share"
-      text="Send your profile link to anyone via text message or using any other platform to share your contact profile."
-    />
-     </div>
-     <div>
-          <img className='NfcPhoneimage' src={NfcPhone}></img>
+    
+    <div className='marketPlaceContainer grid lg:grid-cols-4 lg:gap-x-10 lg:gap-y-7 sm:grid-cols-3 sm:gap-x-5 sm:gap-y-3 md:grid-cols-4 md:gap-x-5 gap-y-3 m-5    '>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={photo3}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1090</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
     </div>
+  </div>
+</div>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={women1}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1090</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
+    </div>
+  </div>
+</div>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={kid1}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1090</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
+    </div>
+  </div>
+</div>
+            <div className="card card-compact md:w-50  bg-base-100 shadow-xl">
+  <figure><img src={women2}  /></figure>
+  <div className="">
+    <h2 className="text-xl font-semibold">Mens Premium Jacket </h2>
+    <h4 className='text-md text-slate-400 font-medium mt-2'>Starts From</h4>
+    <h3 className='font-bold text-xl mt-3'>1090</h3>
+    <div className="parentButton flex mt-5 ">
+      <button className="btn custom_button  rounded-none  rounded-l-lg flex-auto mr-1 w-50">Buy Now</button>
+      <button className="btn custom_button rounded-none rounded-r-lg flex-auto    w-50"><BsFillCartPlusFill></BsFillCartPlusFill></button>
+    </div>
+  </div>
+</div>
+{/* ========================================= */}
+
+{/* --------------------------- */}
+
+
+
+
+
+        </div>
+
+    
+     </div>
 
     </Tabs.Content>
   </Box>
