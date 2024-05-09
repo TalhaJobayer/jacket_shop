@@ -2,6 +2,14 @@
 .CustomTabButton{
     justify-content: space-evenly;
 }
+.text-box{
+ 
+  text-align: left;
+  padding-left: 220px;
+  margin-top: 50px;
+
+
+}
 /* Styling for sections */
 .elementor-section {
     margin-bottom: 30px;

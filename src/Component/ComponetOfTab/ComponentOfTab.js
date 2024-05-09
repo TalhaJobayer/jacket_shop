@@ -18,6 +18,15 @@ const ComponentOfTab = () => {
   
 const [activeTab,setActiveTab] = useState("Gents")
     return (
+     <>
+     <div className='text-box  uppercase'>
+      <h1 className='  font-black   text-3xl '>
+      elevate Your Style with Our Latest Collection
+      </h1>
+      <p className=''>
+      Each piece is crafted to enhance your fashion statement.
+      </p>
+     </div>
       <div className=' flex justify-content: space-between;'>
         <div>
              <Tabs.Root   value={activeTab}
@@ -295,6 +304,7 @@ const [activeTab,setActiveTab] = useState("Gents")
         </div>
         
         </div>
+     </>
     );
 };
 
